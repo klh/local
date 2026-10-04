@@ -88,7 +88,7 @@ HTTPS is Caddy's internal CA (auto-HTTPS): this Mac verifies clean (`ssl_verify_
 
 ## Bar
 
-The registry, rendered live: [http://bar.local/](http://bar.local/) — one hairline row per service (name, port, target, health via the same 1.5s GET the `status` verb makes, dns-claim liveness, fragment presence, created date), under a Caddy line (:80 answering, `caddy version`) and the registry path. Vanilla JS refreshing every 3s, no frameworks, no external assets — a single-file Bun server, `bin/dashboard.ts`.
+The registry, rendered live: [http://bar.local/](http://bar.local/) — one hairline row per service (name, port, target, health via the same 1.5s GET the `status` verb makes, dns-claim liveness, fragment presence, created date), under a Caddy line (:80 answering, `caddy version`) and the registry path. Vanilla JS refreshing every 3s, no frameworks, no external assets — a single-file Bun server, `bin/dashboard.ts`, wearing the shared klh theme so the bar reads as one product with belt.local and suspenders.local: dark/light tokens, the settings gear, and the `klh·fleet` strip linking belt · suspenders · local. `bin/klh-theme.ts` is a byte-identical copy of klh/suspenders `hooks/lib/theme.ts`; never edit it by hand: re-vendor it and bump the pin in `bin/dashboard.test.ts`.
 
 ![The bar — every local service, one honest row each](assets/bar.png)
 
